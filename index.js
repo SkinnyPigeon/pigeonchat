@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
     socket.emit('me', socket.id);
 
     socket.on('disconnect', () => {
-        socket.broadcase.emit('callended');
+        socket.broadcast.emit('callended');
     });
 
     socket.on('calluser', ({userToCall, signalData, from, name }) => {
